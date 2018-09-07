@@ -23,26 +23,31 @@ This script uses 'guestfs' to:
   Build with default mode (copying all files to the disk image):
   
   ```
-  ./build-boot-image.py -i CentOS-7-x86_64-Minimal-1804.iso -o ./boot-image.raw --create  --defaults  --verbose
+  ./build-boot-image.py -i centos.iso -o ./boot-image.raw --create  --defaults  --verbose
   ```
 
   Minimal mode - just do the partitioning, and syslinux setup:
 
   ```
-  ./build-boot-image.py -i CentOS-7-x86_64-Minimal-1804.iso -o ./boot-image.raw --create --force --minimal  --verbose
+  ./build-boot-image.py -i centos.iso -o ./boot-image.raw --create --force --minimal  --verbose
   ```
   
   Update existing image - copy Packages and repodata from iso: 
   
   ```
-  ./build-boot-image.py -i CentOS-7-x86_64-Minimal-1804.iso -o ./boot-image.raw --update  --copy Packages --copy Repodata
+  ./build-boot-image.py -i centos.iso -o ./boot-image.raw --update  --copy Packages --copy Repodata
   
   ```
 
   Rebuild with Centos7 defaults, overwriting the previous file:
   
   ```
-  ./build-boot-image.py -i ~/centos7-isos/CentOS-7-x86_64-Minimal-1804.iso -o ./boot-image.raw --force --create  --centos7 
+  ./build-boot-image.py -i centos.iso -o ./boot-image.raw --force --create  --centos7 
   ```
  
+  Edit a sysconfig file of an existing image to delete redhat 'quiet' option on kernel boot lines (match LABEL, replace 'quiet' with ''):
   
+  ```
+  ./build-boot-image.py -i centos.iso -o ./boot-image.raw --update -edit /usb/sysconfig/sysconfig.cfg --sed LABEL= quiet '' 
+  ```
+ 
