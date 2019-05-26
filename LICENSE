@@ -1,0 +1,13 @@
+LICENSE / COPYING
+#################
+
+This script was started using sample code which appears at the following web location and therefore may be (C)opyright RedHat:
+
+    https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html/director_installation_and_usage/appe-whole_disk_images
+
+The remainder of the code in this script is licensed under the GNU General Public License, version 2, June 1991.
+
+The full text of the GNU General Public License, Version 2, June 1991, is available at:
+    
+    https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+
