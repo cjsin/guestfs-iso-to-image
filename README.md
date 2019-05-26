@@ -21,8 +21,9 @@ This script uses 'guestfs' to:
   # Requirements
   
   You will need:
+  
      - libguestfs
-     - Python2-guestfs (python bindings)
+     - guestfs for python3
      - an ISO file
     
   # Example usage:
