@@ -2,7 +2,13 @@
 
 # This script was developed using the following one as a great example to get started:
 #    https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html/director_installation_and_usage/appe-whole_disk_images
-
+#
+# Please see that site for Copyright on any original code that remains.
+#
+# Please see the file LICENSE in this repository for License / Copying conditions to the remaining code, written by me.
+#
+# In particular please read the section 'NO WARRANTY' of the license before using this code.
+#
 
 from collections import OrderedDict
 import guestfs
